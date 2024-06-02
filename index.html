@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Tag Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <h1>Price Tag Generator</h1>
+    <form id="priceTagForm">
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price" required><br><br>
+        <label for="itemName">Item Name:</label><br>
+        <input type="text" id="itemName" name="itemName" required><br><br>
+        <button type="button" onclick="generatePriceTag()">Generate Price Tag</button>
+        <button type="button" onclick="printPriceTag()">Print Price Tag</button>
+    </form>
+    
+    <div id="priceTag" class="price-tag">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class="separator"></div>
+        </div>
+        <div class="content-container">
+            <div class="department"><span id="itemNameValue"></span></div>
+            <div class="price">LKR <span id="priceValue"></span></div>
+            <div class="barcode-container">
+                <svg id="barcode"></svg>
+                <div class="barcode-number" id="barcodeValue"></div>
+            </div>
+            <div class="website">www.fixcom.web.lk</div>
+        </div>
+    </div>
+     
+    <script src="script.js"></script>
+</body>
+</html>

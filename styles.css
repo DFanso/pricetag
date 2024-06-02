@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.price-tag {
+    width: 49mm;
+    height: 29mm;
+    border: 1px solid black;
+    padding: 2mm;
+    margin-top: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-right: 2mm;
+}
+
+.logo {
+    width: auto;
+    margin-left: 0.5mm;
+    height: 20mm;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.department {
+    font-size: 3.5mm;
+    /* margin-bottom: 1mm; */
+}
+
+.price {
+    font-size: 3mm;
+    /* margin-bottom: 1mm; */
+}
+
+.barcode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 1mm; */
+}
+
+.barcode-number {
+    font-size: 2mm;
+    letter-spacing: 1mm;
+    /* margin-top: 1mm; */
+}
+
+.website {
+    font-size: 2mm;
+}
+
+@media print {
+    body {
+        margin: 0;
+    }
+    .price-tag {
+        border: none;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    @page {
+        size: 50mm 30mm;
+        margin: 0;
+    }
+}
