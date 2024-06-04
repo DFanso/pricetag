@@ -18,7 +18,7 @@ form {
 .price-tag {
     width: 37mm;
     height: 24mm;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 3mm;
     padding-bottom: 1.5mm;
     margin-top: 100px;

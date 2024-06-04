@@ -41,7 +41,9 @@ function printPriceTagPrint() {
     }).then(function(canvas) {
         const imgData = canvas.toDataURL('image/png');
         const link = document.createElement('a');
-        link.download = 'price-tag.png';
+        const name = document.getElementById('itemNameValue').textContent;
+
+        link.download = `${name} price-tag.png`;
         link.href = imgData;
         link.click();
     });
