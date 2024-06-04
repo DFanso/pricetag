@@ -7,8 +7,9 @@ function generatePriceTag() {
     JsBarcode("#barcode", barcodeValue, {
         format: "CODE128",
         displayValue: false,
-        width: 1.4,
-        height: 40
+        width: 1,
+        height: 30,
+    
     });
     
     document.getElementById('priceValue').textContent = price;
@@ -17,6 +18,7 @@ function generatePriceTag() {
 }
 
 function printPriceTag() {
+    printPriceTagPrint()
     const priceTag = document.getElementById('priceTag');
     const printWindow = window.open('', '_blank', 'width=50,height=30');
     printWindow.document.write('<html><head><title>Print Price Tag</title>');
@@ -29,4 +31,18 @@ function printPriceTag() {
         printWindow.print();
         printWindow.close();
     }, 100);
+}
+
+function printPriceTagPrint() {
+    const priceTag = document.getElementById('priceTag');
+    html2canvas(priceTag, {
+        useCORS: true,
+        scale: window.devicePixelRatio
+    }).then(function(canvas) {
+        const imgData = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.download = 'price-tag.png';
+        link.href = imgData;
+        link.click();
+    });
 }

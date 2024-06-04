@@ -16,11 +16,12 @@ form {
 }
 
 .price-tag {
-    width: 49mm;
-    height: 29mm;
+    width: 37mm;
+    height: 24mm;
     border: 1px solid black;
-    padding: 2mm;
-    margin-top: 20px;
+    padding: 3mm;
+    padding-bottom: 1.5mm;
+    margin-top: 100px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -33,6 +34,7 @@ form {
     justify-content: center;
     height: 100%;
     margin-right: 2mm;
+    
 }
 
 .logo {
@@ -50,13 +52,23 @@ form {
 }
 
 .department {
-    font-size: 3.5mm;
+    font-size: 4mm;
+    font-weight: bold;
+    
+    
+   
+    
+    
     /* margin-bottom: 1mm; */
 }
 
 .price {
-    font-size: 3mm;
-    /* margin-bottom: 1mm; */
+    font-size: 2mm;
+    margin-top: 1px;
+    /*
+font-style: italic;
+    
+    /* margin-bottom: 0.2mm; */
 }
 
 .barcode-container {
@@ -69,11 +81,11 @@ form {
 .barcode-number {
     font-size: 2mm;
     letter-spacing: 1mm;
-    /* margin-top: 1mm; */
+    /* margin-bottom: 1mm; */
 }
 
 .website {
-    font-size: 2mm;
+    font-size: 1mm;
 }
 
 @media print {
@@ -88,7 +100,7 @@ form {
         padding: 0;
     }
     @page {
-        size: 50mm 30mm;
+        size: 38mm 25mm;
         margin: 0;
     }
 }
